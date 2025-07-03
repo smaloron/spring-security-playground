@@ -39,6 +39,11 @@ public class DataSeeder implements CommandLineRunner {
             userRepository.save(admin);
 
             System.out.println(">>> Utilisateurs de test créés !");
+
+            System.out.println("Test du mot de passe !");
+            System.out.println(
+                    passwordEncoder.matches("pass", "$2a$10$pa506UuIZFMLxSMTEtgnl.vjjnKPakgqe1fuS5uO1f3eOVzmgqqPG")
+            );
         }
     }
 }

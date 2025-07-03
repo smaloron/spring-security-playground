@@ -26,7 +26,7 @@ public class DataSeeder implements CommandLineRunner {
             User user = new User();
             user.setUsername("john.doe");
             // Le mot de passe doit être encodé avant d'être sauvegardé !
-            user.setPassword(passwordEncoder.encode("pass1"));
+            user.setPassword(passwordEncoder.encode("pass"));
             user.setRole("ROLE_USER");
             // ... setter d'autres champs si nécessaire
             userRepository.save(user);
@@ -34,7 +34,7 @@ public class DataSeeder implements CommandLineRunner {
             // Création de l'administrateur
             User admin = new User();
             admin.setUsername("jane.smith");
-            admin.setPassword(passwordEncoder.encode("pass2"));
+            admin.setPassword(passwordEncoder.encode("pass"));
             admin.setRole("ROLE_ADMIN");
             userRepository.save(admin);
 
